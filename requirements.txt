@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+sqlalchemy
+scikit-learn
+pydantic
+gymnasium
+stable_baselines3
