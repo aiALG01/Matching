@@ -197,6 +197,13 @@ def human_score(score):
 
 # ----------- FastAPI Setup -----------
 app = FastAPI(title="Matching-API")
+@app.get("/")
+def root():
+    return {"status": "ok"}
+
+@app.get("/health")
+def health():
+    return {"status": "healthy"}
 
 # ---------- Pydantic-Schemas für API ----------
 class ProfileBase(BaseModel):
@@ -655,4 +662,5 @@ def get_events(profile_id: int):
     return [
         {"event_type": e.event_type, "value": e.value, "timestamp": e.timestamp.isoformat()}
         for e in events
+
     ]
