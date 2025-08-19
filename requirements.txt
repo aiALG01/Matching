@@ -5,11 +5,3 @@ scikit-learn
 pydantic
 gymnasium
 stable_baselines3
-
-open: 
-
-cd <DEIN_PFAD_ZUM_PROJEKT>
-
-uvicorn main:app --reload
-
-http://127.0.0.1:8000/docs
